@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    margin: auto;
+    width: 100%;
+    max-width: 100rem;
+    height: auto;
+    text-align: center;
+}
+
+header,footer{
+    border: 0.2rem solid lightblue;
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+nav,aside,section{
+    border: 0.2rem solid lightblue;
+    height: auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav,aside {
+    width: 20%;
+}
+
+section{
+    width: 60%;
+}
+
+article{
+    border: 0.2rem solid lightblue;
+    margin: 0.2rem;
+    padding: 2rem 0;
+    height: auto;
+}
