@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Video Tag</title>
+    <style>
+      div {
+        width: 40%;
+        height: auto;
+        text-align: center;
+        border: 0.1rem #333 solid;
+      }
+      img,
+      video {
+        width: 99%;
+        border: 0.1rem #333 solid;
+      }
+      span {
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>박 콩</span>
+      <img src="../img/KongPark.jpeg" alt="박콩사진" />
+
+      <span>멋진 갱얼쥐</span>
+      <video controls autoplay muted loop>
+        <source src="../img/dogVideo.mp4" />
+      </video>
+    </div>
+    <!-- [image tag]
+        (1) 이미지 크기를 바꿀 때에는 가로 또는 세로 둘 중 하나만 바꿔준다. 일반적으로 이미지를 감싸는 태그의 크기를 정하고 그 크기에 맞춰 이미지 사이즈를 정하는 것이 일반적이다 
+        (2) 이미지 태그의 alt 속성은 사진의 설명을 나타내며 웹접근성 측면에서 반드시 작성해아 한다
+    -->
+    <!-- [video tag]
+        (1) autoplay: 자동재생 (muted와 함께 실행해야함)
+        (2) loop: 반복재생
+        * 최근에는 mp4 type의 영상이 모든 브라우저에서 지원되므로 일반적으로 많이 사용된다
+     -->
+  </body>
+</html>
