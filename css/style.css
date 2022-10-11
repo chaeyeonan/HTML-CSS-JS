@@ -1,49 +1,88 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.wrap{
-    margin: auto;
-    width: 100%;
-    max-width: 100rem;
-    height: auto;
-    text-align: center;
+.wrap {
+  margin: auto;
+  width: 100%;
+  max-width: 100rem;
+  height: auto;
+  text-align: center;
 }
 
-header,footer{
-    border: 0.2rem solid lightblue;
-    width: 100%;
-    height: auto;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 2rem 0;
+header,
+footer {
+  border: 0.15rem solid lightblue;
+  width: 100%;
+  height: auto;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-main{
-    display: flex;
-    flex-direction: row;
+main {
+  display: flex;
+  flex-direction: row;
+  margin: 0.3rem 0;
+  /* gap: 0.3rem; div 간 좌우 간격 (margin: 0 0.3rem; 이랑 똑같음) */
 }
 
-nav,aside,section{
-    border: 0.2rem solid lightblue;
-    height: auto;
-    font-weight: bold;
-    font-size: 1.5rem;
+nav,
+aside,
+section {
+  border: 0.15rem solid lightblue;
+  height: auto;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 4rem 0 0 0;
 }
 
-nav,aside {
-    width: 20%;
+nav,
+aside {
+  width: 20%;
+  padding-block: 6rem;
 }
 
-section{
-    width: 60%;
+section {
+  width: 60%;
 }
 
-article{
-    border: 0.2rem solid lightblue;
-    margin: 0.2rem;
-    padding: 2rem 0;
-    height: auto;
+h3 {
+  height: 4.5rem;
+  /* padding: 1.35rem 0;*/
+}
+
+article {
+  height: auto;
+  width: auto;
+  border: 0.15rem solid lightblue;
+  margin: 0.2rem;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/*Navigation Style*/
+.navi {
+  display: flex;
+  list-style: none;
+  gap: 1.3rem;
+}
+
+.navi a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 25px 30px;
+  display: block;
+  transition: all 0.4s;
+}
+
+.navi li.active a,
+.navi li:hover a {
+  color: #fff;
+  background-color: skyblue;
 }
