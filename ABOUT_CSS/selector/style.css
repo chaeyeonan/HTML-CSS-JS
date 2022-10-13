@@ -1,0 +1,80 @@
+/* cascade style sheet */
+/*
+1. 외부보다는 내부, 내부보다는 인라인이 우선 적용된다
+2. 먼저 작성된 것보다 후에 작성된 것이 우선 적용된다
+*/
+
+/* selector{
+    property:property-value;
+} */
+
+/********* selector **********/
+/*  1. 태그 선택자 : 태그 이름을 그대로 사용한다 */
+h2 {
+  color: rebeccapurple;
+}
+
+/*  2. 아이디, 클래스 선택자 : 아이디는 #, 클래스는 .로 연결한다 */
+#selectID {
+  color: cadetblue;
+}
+.selectCLASS {
+  color: darkgoldenrod;
+}
+
+/* 3. 전체 선택자 : 전체 element를 선택하며 *로 표시한다 */
+* {
+  font-size: 1.2rem;
+}
+
+/* 4-1. 자식 선택자 : 편집하고자 하는 요소의 부모로부터 > 표시를 사용한 하위 요소 */
+p > a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 4-2. 후손 선택자 : 편집하고자 하는 요소의 상위 부모로부터 공백을 사용한 하위요소. 후손 선택자는 자식을 포함한 후손을 선택한다 */
+ul ul a {
+  color: cornflowerblue;
+}
+
+/* 5. 그룹 선택자 : 속성과 값이 같은 요소를 공통 요소로 선택 */
+h2,
+p,
+ul {
+  border: 1px solid;
+}
+
+/* 6. 형제 선택자 */
+/* + 기호는 기준 요소 다음 형제 요소 선택 */
+/* ~ 기호는 기준 요소 다음 형제 요소 전체 선택 */
+.para + p {
+  /*다음 형제만 선택*/
+  color: tomato;
+}
+.para ~ p {
+  /*다음 형제부터 끝까지 선택*/
+  color: rgb(160, 0, 219);
+}
+
+/* 7.가상 선택자(nth) */
+div li:nth-child(3) {
+  color: teal;
+}
+div li:first-child {
+  /* first-child 랑 last-child 밖에 안됨*/
+  color: rgb(131, 82, 25);
+}
+div li:last-child {
+  /* first-child 랑 last-child 밖에 안됨*/
+  color: brown;
+}
+
+/* 8. 의제선택자 */
+/* before, after를 사용할 대 content 속성의 값은 필수이다. 빈 공간을 나타내고 싶다면 ''을 사용한다 */
+h1::before {
+  content: "[";
+}
+h1::after {
+  content: "]";
+}
