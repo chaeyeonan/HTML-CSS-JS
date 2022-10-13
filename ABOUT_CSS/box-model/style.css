@@ -1,0 +1,80 @@
+/* 
+(1) margin은 요소와 요소 사이의 간격을 정의한다
+    하나의 값 : 4개의 면 공통 / 2개의 값 : 위 아래 / 3개의 값: 위 좌우 아래 / 4개의 값 : 위 오른쪽 아래 왼쪽 (시계방향)
+
+(2) padding은 컨텐츠와 보더 사이의 간격을 정의한다. 요소에 포함된 영역이다
+
+(3) border는 박스의 선을 정의한다
+    border-width는 상하좌우 4개의 값으로 구분된다
+    border-style은 주로 solid가 사용되며 다양한 모양이 존재한다. 특히 주의할점은 축약해서 써야할 때 border-style을 누락하면 안된다.
+
+(4) box-sizing 은 간격이 요소에 어떻게 영향을 미치는지를 정의한다
+    content-box는 요소를 그대로 두고 간격이 추가되어 box가 추가된만큼 커진다
+    border-box는 box의 크기는 변화를 주지 않고 영역 안으로 추가된 간격이 적용되기 때문에 레이아웃 box 크기 변화를 주지않는다. 일반적으로 border-box는 초기에 작성하는 기본값으로 활용되는 경우가 많다
+
+(5) background 속성은 박스의 배경을 정의한다
+    backgrond-color: 배경색 
+    background-image : 배경이미지 사진 경로 지정 
+    background-repeat : 사진 반복이 디폴트여서 no repeat을 지정해야한다
+    bacground-position: 첫번째 값은 좌우, 두번째 값은 상하로 위치를 지정한다
+    background-size: 사진과 박스의 비율이 다를 경우 사진을 어떻게 채울지 지정한다. contain의 경우 사진은 다 나오되 박스의 나머지는 비워둔다. 이에반해 cover의 경우 사진으로 박스를 가득 채우지만 비율로 인해 사진의 일부가 잘릴 수 있다
+*/
+
+div:nth-child(1) {
+  background: rgb(166, 190, 215);
+  border: 1px solid;
+
+  margin: 10px 20px 30px 40px;
+  _margin-top: 10px;
+  _margin-right: 20px;
+  _margin-bottom: 30px;
+  _margin-left: 40px;
+
+  padding: 10px 20px 30px 40px;
+  _padding-top: 10px;
+  _padding-right: 20px;
+  _padding-bottom: 30px;
+  _padding-left: 40px;
+}
+
+div:nth-child(2) {
+  background-color: rgb(210, 210, 209);
+  border: 1px solid;
+  margin: 10px 20px 30px 40px;
+  padding: 10px 20px 30px 40px;
+}
+
+.border {
+  _margin: 100px auto;
+  width: 300px;
+  height: auto;
+
+  border: 1px solid #7d7d7d;
+  _border-width: 1px;
+  _border-style: solid;
+  _border-color: #7d7d7d;
+}
+
+.content {
+  margin-top: 30px;
+  width: 200px;
+  height: 60px;
+  border: 1px solid;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 450px;
+  height: 450px;
+  border: 1px solid #7d7d7d;
+  margin-top: 50px;
+
+  background: url("../../img/w6.jpg") no-repeat center center;
+  _background-image: url("../../img/w6.jpg");
+  _background-repeat: no-repeat;
+  _background-position: right center;
+  background-size: contain;
+}
+
+/* background-repeat은 디폴트값이다 */
