@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+/*
+(1) font-family 속성은 주로 웹폰트를 사용한다 : google font 
+    만약 인터넷이 안되는 공간이라면 웹폰트를 받을 수 없는데 이럴 때를 대비해 sans-serif, serif를 함께 작성해 둔다 
+    sans-serif: 비장식체 / serif: 장식체
+
+(2) font-weight 속성은 글씨의 두께를 나타낸다. 
+    font-weight 속성은 border,bold가 같고, normal, thin이 같아서 실제로는 bold와 normal만이 의미있게 사용된다. 
+    하지만 웹폰트의 경우 세부적으로 두께를 선택할 수 있다. 
+
+(3) font-style 속성은 글자의 기울임을 통제한다.
+    font-style 속성 중 italic과 oblique는 동일한 결과이기 때문에 주로 italic을 사용한다
+
+(4) color 속성은 글자의 색을 나타낸다
+
+(5) text-align 속성은 글의 좌우 배치를 나타낸다
+    값으로는 right, center, left, justify가 있다
+
+(6) text-decoration 속성은 밑줄, 중간줄, 상위줄을 나타낸다.
+    underline, overline, line-through, none 
+
+(7) letter-spacing, word-spacing 은 글자 및 글 간격을 나타낸다
+    letter-spacing: 글자 간 간격 / word-spacing: 단어 간 간격
+
+(8) line-height 속성은 글의 행 간격을 나타낸다.
+    line-height 속성 값은 글자 크기에 따른 행간을 유동적으로 유지하기 위해 em 단위를 디폴트로 사용한다
+
+(9) em과 rem 
+    em : 직게 부모의 크기를 기본으로 유동적으로 크기가 조정되는 단위
+    rem : 부모와 상관없이 root에서 정해진 기본 크기에 따라 유동적으로 조정되는 단위
+*/
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: oblique;
+  color: #006400;
+  text-align: left;
+  text-decoration: underline;
+  letter-spacing: 0.1rem;
+  word-spacing: 1rem;
+  line-height: 1.4;
+}
