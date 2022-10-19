@@ -1,13 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+/* 
+  1. animation-name : 애니메이션 keyframes와 연결할 이름
+  2. animation-delay : 애니메이션 실행을 지정 시간동안 지연시킴
+  3. animation-fill-mode : 애니메이션 실행 후 속성이 지속되게 함(forwards 적용시)
+  4. animation-iteration-count : 애니메이션 실행 횟수 지정
+  5. animation-direction : 애니메이션 변화 후 변화 이전으로 자동 계산하여 실행(alternate 적용시)
+  6. animation-duration : 애니메이션 지속 시간 지정
+*/
 
 .outer {
   width: 400px;
   height: 400px;
   border: 1px solid;
-  margin: 20px;
 
   display: flex;
   align-items: center;
@@ -52,7 +55,7 @@
   justify-content: center;
   align-items: center;
 
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .fa-solid {
@@ -64,8 +67,6 @@
 @keyframes hamburgerBar {
   100% {
     transform: scale(2);
-    opacity: 0.3;
+    opacity: 0.3; /* opactiy : 투명도이며, 값이 0에 가까울수록 투명하다 */
   }
 }
-
-/* opactiy : 투명도이며, 값이 0에 가까울수록 투명하다 */
