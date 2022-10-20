@@ -1,0 +1,78 @@
+/* 
+- grid는 테이블 방식의 그리드 레이아웃 나열을 설계할 수 있도록 하는 속성
+
+1. grid-template-colums: 가로축 개수와 크기를 지정
+2. gird-template-rows: 세로축 개수와 크기를 지정
+3. grid-auto-rows: row가 몇개 지정될 지 모를 경우 minmax()함수를 사용하여 row개수 자동 지정
+4. grid-column/row-start: 합쳐야 할 셀의 시작 라인 지정
+5. grid-column/row-end: 합쳐야 할 셀의 마지막 라인 지정
+6. column/row-gap: 각 셀의 간격을 지정
+7. grid-template-areas: grid-area로 지정된 각 셀이 같은 기호별로 합쳐짐
+*/
+
+.container {
+  display: grid;
+  _grid-template-columns: 100px auto 100px;
+  _grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+
+  _grid-template-rows: 100px 100px 100px;
+  grid-auto-rows: minmax(100px, auto);
+  /* grid-auto-rows는 row의 갯수가 몇 개인지 모르는 상태에서 높이를 항상 같게하면서 나열할 수 있도록 한다 */
+
+  _row-gap: 0.5rem;
+  _column-gap: 0.5rem;
+
+  gap: 0.5rem;
+
+  grid-template-areas:
+    "a a a"
+    "b c d"
+    "b e f";
+}
+
+.item {
+  _background-color: rgb(234, 213, 181);
+  color: #fff;
+  font-size: 20px;
+}
+
+.item:nth-child(2n) {
+  _background: #98402783;
+}
+
+.item:nth-child(1) {
+  background: #222;
+  _grid-column-start: 1;
+  _grid-column-end: 3;
+  _grid-column: 1/3;
+  grid-area: a;
+}
+.item:nth-child(2) {
+  background: #333;
+  grid-area: b;
+}
+.item:nth-child(3) {
+  background: #444;
+  _grid-row-start: 2;
+  _grid-row-end: 4;
+  _grid-row: 2/4;
+}
+.item:nth-child(4) {
+  background: #555;
+}
+.item:nth-child(5) {
+  background: #666;
+}
+.item:nth-child(6) {
+  background: #777;
+}
+.item:nth-child(7) {
+  background: #888;
+}
+.item:nth-child(8) {
+  background: #999;
+}
+.item:nth-child(9) {
+  background: #aaa;
+}
