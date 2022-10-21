@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
 
 /* reset */
@@ -21,4 +21,249 @@ img {
 body {
   font: 12px/1.6 "Poiret One";
   color: #555;
+}
+
+.clear:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* ========== Header Style ========== */
+header {
+  position: fixed;
+  width: 15%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+
+/* ========== Nav Style ========== */
+nav {
+  position: relative;
+  width: 85%;
+  height: 35px;
+  background: #212121;
+  margin-left: 15%;
+}
+
+/* ========== Section Style ========== */
+section {
+  width: 85%;
+  position: relative;
+  margin-left: 15%;
+}
+
+/* ========== Article Box Style ========== */
+article {
+  width: 20%;
+  height: 260px;
+  float: left;
+  transition: all 0.5s ease;
+  animation: scale 1s 1;
+  color: #fff;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+article:nth-child(1) {
+  background: #aaa;
+  width: 60%;
+  height: 520px;
+}
+article:nth-child(2) {
+  background: #bbb;
+  width: 40%;
+}
+article:nth-child(3) {
+  background: #ccc;
+}
+article:nth-child(4) {
+  background: #ddd;
+}
+article:nth-child(5) {
+  background: #999;
+}
+article:nth-child(6) {
+  background: #888;
+  width: 40%;
+}
+article:nth-child(7) {
+  background: #777;
+}
+article:nth-child(8) {
+  background: #666;
+}
+article:nth-child(9) {
+  background: #555;
+  width: 40%;
+}
+article:nth-child(10) {
+  background: #444;
+}
+article:nth-child(11) {
+  background: #333;
+}
+article:nth-child(12) {
+  background: #222;
+}
+
+/* ========== Screen Size 0px ~ 1599px ========== */
+@media screen and (max-width: 1599px) {
+  /* ========== Header Style ========== */
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+  /* ========== Nav,Section Style ========== */
+  nav,
+  section {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+
+/* ========== Screen Size 1024px ~ 1279px ========== */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* ========== Article Box Style ========== */
+  article {
+    width: 25%;
+  }
+  article:nth-child(1) {
+    width: 75%;
+  }
+  article:nth-child(2) {
+    width: 25%;
+  }
+  article:nth-child(6) {
+    width: 50%;
+  }
+  article:nth-child(7) {
+    width: 50%;
+  }
+  article:nth-child(9) {
+    width: 25%;
+  }
+  article:nth-child(10) {
+    width: 50%;
+  }
+}
+
+/* ========== Screen Size 480px ~ 1023px ========== */
+@media screen and (min-width: 780px) and (max-width: 1023px) {
+  /* ========== Article Box Style ========== */
+  article {
+    width: 33.33%;
+  }
+  article:nth-child(1) {
+    width: 100%;
+    height: 400px;
+  }
+  article:nth-child(2) {
+    width: 66.66%;
+  }
+  article:nth-child(4) {
+    display: none;
+  }
+  article:nth-child(6) {
+    width: 66.66%;
+  }
+  article:nth-child(7) {
+    display: none;
+  }
+  article:nth-child(9) {
+    width: 33.33%;
+  }
+  article:nth-child(10),
+  article:nth-child(12) {
+    display: none;
+  }
+}
+
+/* 
+media query 도 css 우선순위 법칙에 적용이 되지만 속성을 받기 때문에 article 의 범위를 바꾼다고 해서 위에 있는 width 를 지정해준 자식들의 width 까지 변경이 되지 않는다.
+article은 위에 있는 aritcle을 상속받고, 자식들도 각각 상속받는다 
+*/
+
+/* ========== Screen Size 480px ~ 1023px ========== */
+@media screen and (min-width: 480px) and (max-width: 779px) {
+  /* ========== Article Box Style ========== */
+  article {
+    width: 50%;
+  }
+  article:nth-child(1) {
+    width: 100%;
+    height: 400px;
+  }
+  article:nth-child(2) {
+    width: 100%;
+    height: 260px;
+  }
+  article:nth-child(3),
+  article:nth-child(4) {
+    display: none;
+  }
+  article:nth-child(6) {
+    width: 50%;
+  }
+  article:nth-child(7) {
+    display: none;
+  }
+  article:nth-child(9) {
+    width: 50%;
+  }
+  article:nth-child(10) {
+    display: none;
+  }
+}
+
+/* ========== Screen Size 480px ~ 639px ========== */
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  /* ========== Header,Nav Style ========== */
+  header {
+    height: 130px;
+  }
+  nav {
+    display: none;
+  }
+
+  /* ========== Article Box Style ========== */
+  article {
+    height: 150px;
+  }
+  article:nth-child(1) {
+    height: 300px;
+  }
+  article:nth-child(2) {
+    height: 150px;
+  }
+}
+
+/* ========== Screen Size 0px ~ 639px ========== */
+@media screen and (max-width: 479px) {
+  header {
+    position: fixed;
+    height: 40px;
+    background: transparent;
+  }
+  nav,
+  article {
+    display: none;
+  }
+
+  article:nth-child(1) {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
 }
