@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 ol,
 ul {
@@ -18,6 +19,7 @@ a {
 img {
   border: 0;
 }
+html,
 body {
   font: 12px/1.6 "Poiret One";
   color: #555;
@@ -39,6 +41,54 @@ header {
   left: 0;
 }
 
+/* ========== Logo Style ========== */
+header h1 {
+  width: 180px;
+  height: 136px;
+  background: url("../img/logo1.png");
+  background-size: contain;
+
+  position: absolute;
+  top: 136px;
+  left: 50%;
+  margin-left: -90px;
+
+  text-indent: -9999px; /* 들여쓰기 => 음수면 좌측, 양수면 화면 우측으로 들여씀*/
+}
+
+/* ========== Navigation Style ========== */
+#ngb {
+  position: absolute;
+  top: 350px;
+  right: 50%;
+  margin-right: -46.475px;
+  transition: 0.5s;
+}
+
+#ngb a {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  _line-height: 1.8; /* 줄간격*/
+  padding: 10px 0;
+}
+
+#ngb a:hover {
+  color: skyblue;
+}
+
+/* ========== SNS Style ========== */
+.snsSet {
+  position: absolute;
+  width: 90px;
+  height: 47px;
+  bottom: 50px;
+  right: 50%;
+  margin-right: -45px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* ========== Nav Style ========== */
 nav {
   position: relative;
@@ -46,6 +96,11 @@ nav {
   height: 35px;
   background: #212121;
   margin-left: 15%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
 /* ========== Section Style ========== */
@@ -124,6 +179,37 @@ article:nth-child(12) {
     width: 100%;
     height: 80px;
   }
+  header h1 {
+    background: url("../img/logo2.png");
+    background-size: contain;
+    width: 200px;
+    height: 40px;
+    top: 50%;
+    left: 0%;
+    margin-top: -20px;
+    margin-left: 0;
+  }
+
+  #ngb {
+    top: 20px;
+    right: 10%;
+    margin-right: 0;
+  }
+
+  #ngb li {
+    float: left;
+    padding: 0 30px;
+  }
+
+  .snsSet {
+    bottom: 50%;
+    right: 2%;
+    top: 10px;
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   /* ========== Nav,Section Style ========== */
   nav,
   section {
@@ -134,6 +220,13 @@ article:nth-child(12) {
 
 /* ========== Screen Size 1024px ~ 1279px ========== */
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  #ngb {
+    right: 0%;
+  }
+  .snsSet {
+    display: none;
+  }
+
   /* ========== Article Box Style ========== */
   article {
     width: 25%;
@@ -158,8 +251,18 @@ article:nth-child(12) {
   }
 }
 
-/* ========== Screen Size 480px ~ 1023px ========== */
+/* ========== Screen Size 780px ~ 1023px ========== */
 @media screen and (min-width: 780px) and (max-width: 1023px) {
+  #ngb {
+    right: 0%;
+  }
+  #ngb li {
+    padding: 0 15px;
+  }
+  .snsSet {
+    display: none;
+  }
+
   /* ========== Article Box Style ========== */
   article {
     width: 33.33%;
@@ -196,6 +299,16 @@ article은 위에 있는 aritcle을 상속받고, 자식들도 각각 상속받�
 
 /* ========== Screen Size 480px ~ 1023px ========== */
 @media screen and (min-width: 480px) and (max-width: 779px) {
+  #ngb {
+    right: 0%;
+  }
+  #ngb li {
+    padding: 0 15px;
+  }
+  .snsSet {
+    display: none;
+  }
+
   /* ========== Article Box Style ========== */
   article {
     width: 50%;
@@ -232,6 +345,28 @@ article은 위에 있는 aritcle을 상속받고, 자식들도 각각 상속받�
   header {
     height: 130px;
   }
+  header h1 {
+    left: 0px;
+    margin: 0px auto;
+    position: relative;
+    top: 20px;
+  }
+  #ngb {
+    position: relative;
+    right: 0%;
+    transition: 0.5s;
+    top: 35px;
+    height: auto;
+    margin: auto;
+  }
+  #ngb li {
+    width: 25%;
+    padding: 0px 0;
+    text-align: center;
+  }
+  .snsSet {
+    display: none;
+  }
   nav {
     display: none;
   }
@@ -248,15 +383,49 @@ article은 위에 있는 aritcle을 상속받고, 자식들도 각각 상속받�
   }
 }
 
-/* ========== Screen Size 0px ~ 639px ========== */
+/* ========== Screen Size 0px ~ 479px ========== */
 @media screen and (max-width: 479px) {
   header {
     position: fixed;
     height: 40px;
     background: transparent;
+    z-index: 2;
   }
+  header h1 {
+    width: 140px;
+    height: 136px;
+    background: url("../img/logo1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: auto;
+  }
+  #ngb {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    top: 140px;
+    right: 50%;
+    margin-right: -125px;
+  }
+  #ngb li {
+    float: none;
+    background-color: #000;
+    opacity: 0.5;
+    margin: 4px 0;
+    border-radius: 1.2rem;
+  }
+  #ngb li:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  a {
+    color: #fff;
+  }
+
   nav,
-  article {
+  article,
+  .snsSet {
     display: none;
   }
 
