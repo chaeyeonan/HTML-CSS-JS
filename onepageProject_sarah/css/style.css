@@ -40,7 +40,6 @@ img {
 }
 
 .Wrap {
-  position: absolute;
   width: 100%; /* flex 사용할때 height, width 꼭 설정해주기 !!!!!!!!! */
   height: 100%;
   z-index: 5;
