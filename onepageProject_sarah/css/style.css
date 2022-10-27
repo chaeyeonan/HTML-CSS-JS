@@ -36,29 +36,123 @@ img {
   top: 0;
   left: 0;
   opacity: 0.1;
-  z-index: 1;
+  z-index: 1; /* z-index 숫자가 더  높을수록 위에있음. 근데 position이 static 이면 적용이 잘 안됨! */
 }
 
+/* ========== Entire Wrap Style ========== */
 .Wrap {
   width: 100%; /* flex 사용할때 height, width 꼭 설정해주기 !!!!!!!!! */
   height: 100%;
-  z-index: 5;
+  position: fixed;
+  z-index: 100;
 }
 
+/* ========== Header (Logo, SNS) Style ========== */
 header {
-  height: 33.33%;
+  height: 30%;
   width: 100%;
 }
 
+h1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute;
+  top: 130px;
+  left: 50%;
+  margin-left: -200px; */
+}
+
+h1 > img {
+  width: 400px;
+}
+
+.iconWrap {
+  opacity: 0.5;
+  font-size: 25px;
+  position: absolute;
+  right: 3%;
+  top: 50px;
+}
+
+.iconWrap > a {
+  margin-left: 6px;
+}
+
+/* ========== Section Style ========== */
 section {
   _margin-top: 250px;
   display: flex;
   align-items: center;
-  height: 33.33%;
+  height: 40%;
   width: 100%;
   overflow: hidden;
 }
 
 section > img {
   width: 100%;
+}
+
+.sectionNavWrap {
+  position: absolute;
+  background: #111;
+  width: 100%;
+  height: 50px;
+  opacity: 0.7;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav li {
+  width: 200px;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background: #010101;
+  width: 100%;
+  height: 30px;
+  border-top: 0.7px solid #222;
+  font-size: 11px;
+}
+
+.footer_nav {
+  height: 100%;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.footer_nav > a {
+  width: 120px;
+  color: #666;
+}
+
+.footer_nav > a:nth-child(1),
+.footer_nav > a:nth-child(2) {
+  font-weight: 900;
+}
+
+footer > span {
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  font-size: 10px;
+  color: #666;
+  letter-spacing: 1px;
 }
