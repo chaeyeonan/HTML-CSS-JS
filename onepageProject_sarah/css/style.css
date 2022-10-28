@@ -91,7 +91,12 @@ section {
   overflow: hidden;
 }
 
-section > img {
+section > .sectionImg {
+  height: 100%;
+  width: 100%;
+}
+
+section > .sectionImg > img {
   width: 100%;
 }
 
