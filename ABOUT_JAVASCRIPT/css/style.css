@@ -1,0 +1,29 @@
+.container {
+  width: 1024px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  width: 50%;
+  height: 70px;
+  margin: 10px 0;
+  font-size: 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-box img {
+  width: 100%;
+}
