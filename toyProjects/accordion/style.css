@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#accordion {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid salmon;
+  border-top: none;
+  margin: 100px auto;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 0px;
+  padding: 0 10px;
+  background: rgb(243, 243, 243);
+  transition: all 0.8s ease;
+  overflow: hidden;
+}
+
+.title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid salmon;
+  height: 50px;
+  padding: 0 10px;
+}
