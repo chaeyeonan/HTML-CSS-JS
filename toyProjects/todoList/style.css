@@ -76,7 +76,7 @@ input {
   margin: 0.5rem 0 1.5rem 0;
   height: auto;
   max-height: 23vh;
-  overflow: auto;
+  overflow-y: auto;
   background-color: #fff;
   border-radius: 0.5rem;
 }
