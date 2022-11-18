@@ -33,3 +33,10 @@ slWrap.addEventListener("mouseout", () => {
 });
 
 startTimer();
+
+// 네이게이터
+navigators.forEach((navigator) => {
+  navigator.addEventListener("click", () => {
+    console.log(navigator);
+  });
+});

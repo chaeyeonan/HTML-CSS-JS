@@ -19,23 +19,47 @@ body {
   justify-content: center;
 }
 .sl-wrap {
+  width: 90vw;
+  max-width: 1150px;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sl-contents {
   width: 85vw;
   max-width: 1000px;
   height: auto;
   border: 1px solid #fff;
-  position: relative;
   overflow: hidden;
-}
-.sl-contents {
-  width: 100%;
-  height: auto;
 }
 
 .imgs {
   display: flex;
   position: relative;
   left: 0%;
+  transition: all 0.7s ease;
 }
 .imgs img {
   width: 100%;
+}
+
+.navigator {
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.navigator a {
+  transition: all 0.3;
+  opacity: 0.3;
+}
+.navigator a:hover {
+  opacity: 1;
+}
+.arrow {
+  width: 30px;
 }
