@@ -32,22 +32,13 @@ const addTodo = () => {
   todoAll.forEach((item) =>
     item.addEventListener("click", () => {
       item.parentNode.remove();
-      toggleItem(item.parentNode.textContent);
+      toggleItem(item.parentNode);
     })
   );
 };
 
-const toggleItem = (textContent) => {
-  DoneList.insertAdjacentHTML(
-    "afterbegin",
-    `<li class="list">
-        <i class="ri-checkbox-circle-line"></i>
-        <p>${textContent}</p>
-        <span class="delete-icon"
-          ><i class="ri-delete-bin-fill"> </i
-        ></span>
-      </li>`
-  );
+const toggleItem = (data) => {
+  DoneList.insertAdjacentElement("afterbegin", data);
 };
 
 addBtn.addEventListener("click", addTodo);
