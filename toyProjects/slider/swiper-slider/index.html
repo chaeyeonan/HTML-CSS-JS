@@ -12,7 +12,38 @@
     />
   </head>
   <body>
-    <script src="main.js"></script>
+    <div class="wrap">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="../images/img1.jpg" alt="img1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/img2.jpg" alt="img1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/img3.jpg" alt="img1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../images/img4.jpg" alt="img1" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+      <div class="navigators">
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-button-next nav-btn"></div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
