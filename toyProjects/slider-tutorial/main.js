@@ -2,6 +2,7 @@ const imgs = document.querySelector(".imgs");
 const imgAll = document.querySelectorAll(".img");
 const slWrap = document.querySelector(".sl-wrap");
 const navigators = document.querySelectorAll(".navigator a");
+const dotAll = document.querySelectorAll(".dot");
 
 let currentIdx = 0;
 let timer = null;
@@ -9,6 +10,9 @@ let timer = null;
 const startSlider = (eq) => {
   imgs.style.left = -100 * eq + "%";
   currentIdx = eq;
+
+  dotAll.forEach((dot) => dot.classList.remove("active"));
+  dotAll[currentIdx].classList.add("active");
 };
 
 const startTimer = () => {
@@ -37,6 +41,22 @@ startTimer();
 // 네이게이터
 navigators.forEach((navigator) => {
   navigator.addEventListener("click", () => {
-    console.log(navigator);
+    //이전 화살표를 눌렀을 때
+    if (navigator.className === "prev") {
+      if (currentIdx != 0) startSlider(currentIdx - 1);
+      else startSlider(3);
+    }
+    //다음 화살표를 눌렀을 때
+    else if (navigator.className === "next") {
+      if (currentIdx === imgAll.length - 1) startSlider(0);
+      else startSlider(currentIdx + 1);
+    }
   });
 });
+
+// dot 클릭했을 때 사진 이동
+dotAll.forEach((dot, idx) =>
+  dot.addEventListener("click", () => {
+    startSlider(idx);
+  })
+);

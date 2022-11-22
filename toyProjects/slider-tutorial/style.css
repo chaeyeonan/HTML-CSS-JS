@@ -63,3 +63,27 @@ body {
 .arrow {
   width: 30px;
 }
+
+.dot-wrap {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dot-wrap .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #deceb8;
+  border: 1px solid #fff;
+  opacity: 50%;
+}
+
+.dot-wrap .active {
+  background: #fff;
+  opacity: 70%;
+}
