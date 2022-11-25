@@ -34,6 +34,8 @@ const closeLightBox = () => {
   lightBox.classList.remove("show");
 };
 
+overLay.addEventListener("click", closeLightBox);
+
 const onClickImg = (e) => {
   const closeBtn = document.querySelector(".ri-close-line");
   const lightBoxTitle = document.querySelector(".title p");
